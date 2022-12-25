@@ -1,0 +1,17 @@
+#! /bin/sh
+
+pof=" Power Off"
+res=" Restart"
+lck=" Lock"
+chosen=$(echo -e $pof'\n'$res'\n'$lck | rofi -dmenu -i -theme-str '@import "power.rasi"')
+
+case "$chosen" in
+	$pof) poweroff
+	;;
+	$res) reboot
+	;;
+	$lck) dm-tool lock
+	;;
+	*) exit 1
+	;;
+esac

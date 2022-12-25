@@ -1,0 +1,67 @@
+window:
+  padding:
+    x: 15
+    y: 15
+  class:
+    instance: Alacritty
+    general: Alacritty
+  opacity: 1
+
+scrolling:
+  history: 1000
+  multiplier: 3
+
+
+font:
+  normal:
+    family: Source Code Pro
+    style:  Regular
+  bold:
+    family: Source Code Pro
+    style:  Bold
+  italic:
+    family: Source Code Pro
+    style:  MediumItalic
+  bold_italic:
+    family: Source Code Pro
+    style: BoldItalic
+  size: 11
+draw_bold_text_with_bright_colors: true
+
+colors:
+  primary:
+    background: "#11121D"
+    foreground: "#a9b1d6"
+  normal:
+    black: "#282a33"
+    red: "#f7564e"
+    green: "#2bf451"
+    yellow: "#fab46e"
+    blue: "#23a5fa"
+    magenta: "#cf8ef4"
+    cyan: "#69ccfa"
+    white: "#f9f9f9"
+  bright:
+    black: "#3b4252"
+    red: "#ff6a63"
+    green: "#54fb6f"
+    yellow: "#fac687"
+    blue: "#4abbfa"
+    magenta: "#d8a6f4"
+    cyan: "#81d5fa"
+    white: "#fcfcfc"
+
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+    blink-interval: 750
+
+selection:
+  save_to_clipboard: false
+
+shell:
+  program: /usr/bin/zsh
+
+key_bindings:
+  - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
