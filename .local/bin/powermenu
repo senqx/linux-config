@@ -3,14 +3,14 @@
 pof=" Power Off"
 res=" Restart"
 lck=" Lock"
-chosen=$(echo -e $pof'\n'$res'\n'$lck | rofi -dmenu -i -theme-str '@import "power.rasi"')
+chosen=$(echo -e $lck'\n'$pof'\n'$res | rofi -dmenu -i -theme-str '@import "power.rasi"')
 
 case "$chosen" in
+	$lck) dm-tool lock
+	;;
 	$pof) poweroff
 	;;
 	$res) reboot
-	;;
-	$lck) dm-tool lock
 	;;
 	*) exit 1
 	;;
