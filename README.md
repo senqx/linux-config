@@ -3,7 +3,7 @@
 ## Step 1. Install Archlinux
 Archlinux can be installed (maybe not from first attempt) by following [Archlinux installation guide](https://wiki.archlinux.org/title/installation_guide)
 
-> **Note** Before you exit live boot, make sure to install **NetworkManager**
+> **Note** Before you exit live boot, make sure to install **NetworkManager** (pacman -S NetworkManager)
 
 ## Step 2. Configure internet connection in newly installed OS
 If you forgot to install **NetworkManager**, don't worry, it is still possible to configure internet, but, of course, with more steps.
