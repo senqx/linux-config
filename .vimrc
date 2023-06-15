@@ -1,45 +1,45 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-
-
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'rip-rip/clang_complete'
-Plugin 'nanotech/jellybeans.vim'
-Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'VundleVim/Vundle.vim'              " Required
+Plugin 'tpope/vim-fugitive'                " Git wrapper
+Plugin 'xavierd/clang_complete'            " C++ LSP
+Plugin 'majutsushi/tagbar'                 " Hierarchy tree <F8>
+Plugin 'ntpeters/vim-better-whitespace'    " Trailing whitespace highlight <F7>
+Plugin 'scrooloose/nerdtree'               " Directory tree view <F6>
+Plugin 'joshdick/onedark.vim'              " Nice dark theme
 
-" All of your Plugins must be added before the following line
 call vundle#end()
 filetype plugin indent on
 
+let g:cklang_library_path='Path/To/Clang/Lib'  " Path to lib
+let g:clang_complete_open=1                    " Show errors onn bottom
+let g:clang_periodic_quickfix                  " Auto highlight errors
 
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+nmap <F8> :TagbarToggle<CR>
+nmap <F7> :ToggleWhitespace<CR>
+nmap <F6> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeFocus<CR>
 
-syntax on
-colorscheme jellybeans
+set tabstop=2
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set autoident
+set smartident
 
-" show existing tab with 4 spaces width
-set tabstop=4
-
-" when indenting with '>', use 4 spaces width
-set shiftwidth=4
-
-" line numbers
 set number
+
+set cursorline
+set cc=81
+
+colorscheme onedark
+syntax enable
 
 " vim hardcodes background color erase even if the terminfo file does
 " not contain bce (not to mention that libvte based terminals
