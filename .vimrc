@@ -30,8 +30,8 @@ set tabstop=2
 set expandtab
 set softtabstop=2
 set shiftwidth=2
-set autoident
-set smartident
+set autoindent
+set smartindent
 
 set number
 
