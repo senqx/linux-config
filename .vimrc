@@ -13,8 +13,7 @@ Plugin 'majutsushi/tagbar'                " Hierarchy tree <F8>
 Plugin 'ntpeters/vim-better-whitespace'   " Trailing whitespace <F7>
 Plugin 'scrooloose/nerdtree'              " TreeView <F6>
 Plugin 'joshdick/onedark.vim'             " Nice dark theme
-Plugin 'vim-airline/vim-airline'          " Status bar
-Plugin 'vim-airline/vim-airline-themes'   " Status bar themes
+Plugin 'itchyny/lightline.vim'            " Status bar
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ syntax
 Plugin 'tpope/vim-commentary'             " Easy commenting
 
@@ -31,6 +30,12 @@ nnoremap <C-n> :NERDTreeFocus<CR>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_confirm_extra_conf = 0
+
+" Status bar settings
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
 
 " General settings
 syntax on                   " Enable syntax highlighting
@@ -50,5 +55,6 @@ set clipboard=unnamedplus   " Use system clipboard
 set nowrap                  " Don't wrap lines
 set cc=81                   " Highlight 81th column (Keep the code concise)
 set encoding=utf-8          " Ensure compatibility
+set backspace=2             " Fix backspace
 
 colorscheme onedark
