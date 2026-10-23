@@ -120,7 +120,12 @@ syntax, and Vim startup. A complete fresh Arch installation has not been tested
 with this revision. The [setup guide](docs/arch-i3-guide.md) explains the steps
 and links to the Arch Wiki for installation details that depend on your hardware.
 
-The repository currently has no declared license. The wallpaper's original
-author and redistribution terms have not been verified; it is not covered by
-any implied license for the configuration files. Third-party plugins, fonts,
-and icons have their own licenses.
+The configuration files, scripts, and guide are licensed under the
+[MIT License](LICENSE). You may use, modify, redistribute, and sell copies,
+including in proprietary projects, provided you retain the copyright and
+license notice.
+
+The third-party image `Wallpapers/wallpaperbetter.com_1920x1080.jpg` is
+**excluded from the MIT license**. Its creator and redistribution terms have
+not been verified; see [wallpaper licensing](Wallpapers/README.md).
+Third-party plugins, fonts, and icons have their own licenses.
