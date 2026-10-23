@@ -3,8 +3,9 @@ set nocompatible
 filetype off
 
 " Vundle setup
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+if isdirectory(expand("~/.vim/bundle/Vundle.vim"))
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'             " Required
 Plugin 'tpope/vim-fugitive'               " Git wrapper
@@ -17,7 +18,8 @@ Plugin 'itchyny/lightline.vim'            " Status bar
 Plugin 'octol/vim-cpp-enhanced-highlight' " Enhanced C++ syntax
 Plugin 'tpope/vim-commentary'             " Easy commenting
 
-call vundle#end()
+  call vundle#end()
+endif
 filetype plugin indent on
 
 " Key mappings
@@ -27,9 +29,11 @@ nmap <F6> :NERDTreeToggle<CR>
 nnoremap <C-n> :NERDTreeFocus<CR>
 
 " YouCompleteMe settings
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+if filereadable(expand("~/.vim/.ycm_extra_conf.py"))
+  let g:ycm_global_ycm_extra_conf = expand("~/.vim/.ycm_extra_conf.py")
+endif
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_confirm_extra_conf = 0
+let g:ycm_confirm_extra_conf = 1
 
 " Status bar settings
 set laststatus=2
@@ -57,4 +61,6 @@ set cc=81                   " Highlight 81th column (Keep the code concise)
 set encoding=utf-8          " Ensure compatibility
 set backspace=2             " Fix backspace
 
-colorscheme onedark
+if !empty(globpath(&runtimepath, "colors/onedark.vim"))
+  colorscheme onedark
+endif

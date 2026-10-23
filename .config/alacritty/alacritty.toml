@@ -1,0 +1,79 @@
+# Alacritty 0.14+ (the former YAML configuration is in Git history).
+[window]
+opacity = 1.0
+
+[window.padding]
+x = 15
+y = 15
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[scrolling]
+history = 1000
+multiplier = 3
+
+[font]
+size = 11.0
+
+[font.normal]
+family = "Source Code Pro"
+style = "Regular"
+
+[font.bold]
+family = "Source Code Pro"
+style = "Bold"
+
+[font.italic]
+family = "Source Code Pro"
+style = "MediumItalic"
+
+[font.bold_italic]
+family = "Source Code Pro"
+style = "BoldItalic"
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.primary]
+background = "#11121D"
+foreground = "#a9b1d6"
+
+[colors.normal]
+black = "#282a33"
+red = "#f7564e"
+green = "#2bf451"
+yellow = "#fab46e"
+blue = "#23a5fa"
+magenta = "#cf8ef4"
+cyan = "#69ccfa"
+white = "#f9f9f9"
+
+[colors.bright]
+black = "#3b4252"
+red = "#ff6a63"
+green = "#54fb6f"
+yellow = "#fac687"
+blue = "#4abbfa"
+magenta = "#d8a6f4"
+cyan = "#81d5fa"
+white = "#fcfcfc"
+
+[cursor]
+blink_interval = 750
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+[selection]
+save_to_clipboard = false
+
+[terminal.shell]
+program = "/usr/bin/zsh"
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Super|Shift"
+action = "SpawnNewInstance"

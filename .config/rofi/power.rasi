@@ -1,7 +1,9 @@
-nputbar {
+@import "config.rasi"
+
+inputbar {
   children: [entry];
 }
 
 listview {
-	lines: 3;
+  lines: 3;
 }

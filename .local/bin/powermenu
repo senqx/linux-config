@@ -1,17 +1,16 @@
-#! /bin/sh
+#!/bin/sh
 
-pof=" Power Off"
-res=" Restart"
-lck=" Lock"
-chosen=$(echo -e $lck'\n'$pof'\n'$res | rofi -dmenu -i -theme-str '@import "power.rasi"')
+power_off=' Power Off'
+restart=' Restart'
+lock=' Lock'
+theme="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/power.rasi"
+
+chosen=$(printf '%s\n' "$lock" "$power_off" "$restart" |
+    rofi -dmenu -i -p Power -theme "$theme") || exit 0
 
 case "$chosen" in
-	$lck) dm-tool lock
-	;;
-	$pof) poweroff
-	;;
-	$res) reboot
-	;;
-	*) exit 1
-	;;
+    "$lock") dm-tool lock ;;
+    "$power_off") systemctl poweroff ;;
+    "$restart") systemctl reboot ;;
+    *) exit 0 ;;
 esac

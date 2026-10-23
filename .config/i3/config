@@ -178,7 +178,7 @@ bindsym $mod+Shift+r restart
 #
 
 # Power setting (with rofi)
-bindsym $mod+Control+l exec .local/bin/powermenu
+bindsym $mod+Control+l exec --no-startup-id ~/.local/bin/powermenu
 
 
 # App starting tool (Select one of the below: 1. dmenu, 2. rofi)
