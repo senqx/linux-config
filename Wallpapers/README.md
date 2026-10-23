@@ -1,19 +1,26 @@
-# Wallpaper licensing
+# Amber Horizon
 
-`wallpaperbetter.com_1920x1080.jpg` is a third-party image and is **excluded
-from this repository's MIT license**. No permission to reuse or redistribute
-this image is granted by this repository.
+An original abstract wallpaper made for this repository, with flowing hill
+shapes, navy and teal colors, and a soft amber glow. It was drawn directly as
+SVG; it contains no traced image, stock assets, fonts, or external resources.
 
-The filename indicates WallpaperBetter as the download site, but the original
-image page, artist, and redistribution license have not been verified. The
-JPEG has no embedded creator or licensing information. The image resembles
-Firewatch-themed artwork; this is not a verified attribution.
+- `amber-horizon.svg`: editable vector source, 3840 × 2160 canvas.
+- `amber-horizon.png`: 4K export for wallpaper tools such as Nitrogen.
 
-Checked on 2026-10-23: WallpaperBetter's pages were inaccessible behind a
-browser challenge. The [official Firewatch site](https://www.firewatchgame.com/)
-and [FAQ](https://www.firewatchgame.com/about/) identify copyright ownership
-and discuss streaming, but do not establish redistribution permission for
-this particular image.
+Both files are covered by the repository's [MIT License](../LICENSE).
+Copyright (c) 2026 senqx. Keep the copyright and license notice when
+redistributing them.
 
-Use an image whose license allows your intended use when sharing a copy of
-this setup. See the i3 config's Nitrogen command to choose your own wallpaper.
+## Edit and export
+
+Edit the SVG in a text editor or an SVG editor. The gradients and individual
+hill paths are separate elements, so you can change the palette and shapes.
+To regenerate the PNG with librsvg's `rsvg-convert`:
+
+```sh
+rsvg-convert -o Wallpapers/amber-horizon.png Wallpapers/amber-horizon.svg
+```
+
+Run that command from the repository root. Use `-w 1920 -h 1080` for a smaller
+export. The i3 startup configuration points to `~/Wallpapers/amber-horizon.png`;
+see the [installation instructions](../README.md#wallpaper).

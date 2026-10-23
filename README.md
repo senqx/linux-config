@@ -19,7 +19,7 @@ them on an existing desktop.
 | `.config/rofi/power.rasi` | Power-menu theme |
 | `.local/bin/powermenu` | Lock, power off, or restart through Rofi |
 | `.vimrc` | Editor settings and optional Vundle plugins |
-| `Wallpapers/` | Wallpaper retained from the original setup |
+| `Wallpapers/` | Original Amber Horizon wallpaper (SVG and 4K PNG) |
 
 The layout mirrors paths under your home directory. This setup targets i3 on
 X11, not Sway or another Wayland compositor. Gaps require i3 4.22 or newer.
@@ -78,7 +78,23 @@ Check these personal choices in the i3 config before reloading:
 - Firefox/Steam workspace assignments and Steam floating rules.
 - Fonts, colors, and gaps.
 - The Nitrogen wallpaper command. Point it to an image you have locally, or
-  comment it out. The repository wallpaper is not installed by the commands above.
+  comment it out. To use the included wallpaper, follow the optional steps below.
+
+## Wallpaper
+
+![Amber Horizon](Wallpapers/amber-horizon.png)
+
+The original wallpaper uses navy, teal, and amber to complement the desktop
+colors. Both the editable SVG and the 3840 × 2160 PNG are MIT licensed.
+To install the PNG used by the i3 startup command:
+
+```sh
+mkdir -p ~/Wallpapers
+cp -i Wallpapers/amber-horizon.png ~/Wallpapers/amber-horizon.png
+nitrogen --set-auto ~/Wallpapers/amber-horizon.png
+```
+
+See [wallpaper details](Wallpapers/README.md) for editing and export instructions.
 
 ## Shortcuts
 
@@ -120,12 +136,10 @@ syntax, and Vim startup. A complete fresh Arch installation has not been tested
 with this revision. The [setup guide](docs/arch-i3-guide.md) explains the steps
 and links to the Arch Wiki for installation details that depend on your hardware.
 
-The configuration files, scripts, and guide are licensed under the
-[MIT License](LICENSE). You may use, modify, redistribute, and sell copies,
-including in proprietary projects, provided you retain the copyright and
-license notice.
+The configuration files, scripts, guide, and original wallpaper (SVG and PNG)
+are licensed under the [MIT License](LICENSE). You may use, modify,
+redistribute, and sell copies, including in proprietary projects, provided you
+retain the copyright and license notice.
 
-The third-party image `Wallpapers/wallpaperbetter.com_1920x1080.jpg` is
-**excluded from the MIT license**. Its creator and redistribution terms have
-not been verified; see [wallpaper licensing](Wallpapers/README.md).
-Third-party plugins, fonts, and icons have their own licenses.
+Third-party plugins, fonts, and icons linked or referenced by this guide have
+their own licenses.

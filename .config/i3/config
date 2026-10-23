@@ -8,7 +8,7 @@ font pango:monospace 8
 # Place startup command here
 exec --no-startup-id setxkbmap -layout us,ru -option grp:alt_shift_toggle
 #   Wallpaper
-exec --no-startup-id nitrogen --no-recurse --set-auto ~/Wallpapers/wallpaperbetter.com_1920x1080.jpg
+exec --no-startup-id nitrogen --no-recurse --set-auto ~/Wallpapers/amber-horizon.png
 # ...
 # ...
 #
